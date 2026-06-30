@@ -19,6 +19,13 @@ type, and squishy spring motion — playful but clean.
 > It's neubrutalism (solid offset shadows, defined hairline borders) **softened**
 > with rounded corners, warm tones, and gloss. Friendly, not harsh.
 
+> **Note:** `npx skills add` installs only this `SKILL.md`. The reference docs and
+> drop-in template source live in the GitHub repo and are linked below as absolute
+> URLs — fetch them on demand. Repo:
+> <https://github.com/Salman-js/marshmallow-ui>. To get everything locally instead,
+> `git clone https://github.com/Salman-js/marshmallow-ui` (the `templates/` folder
+> is the copy-paste source).
+
 ## The 7 signature traits
 
 1. **Warm cream canvas** — never pure white/grey backgrounds. Light mode is cream
@@ -46,7 +53,7 @@ type, and squishy spring motion — playful but clean.
 
 ## Quick start
 
-1. **Install deps** (see [references/setup.md](references/setup.md) for versions):
+1. **Install deps** (see [setup.md](https://github.com/Salman-js/marshmallow-ui/blob/main/references/setup.md) for versions):
 
 ```bash
 npx expo install expo-font @expo-google-fonts/baloo-2 @expo/vector-icons \
@@ -55,7 +62,9 @@ npx expo install expo-font @expo-google-fonts/baloo-2 @expo/vector-icons \
 npm i nativewind react-native-css pressto
 ```
 
-2. **Copy the templates** into your app's source tree (default alias `@/*` → `src/*`):
+2. **Copy the templates** into your app's source tree (default alias `@/*` → `src/*`).
+   Source: [`templates/`](https://github.com/Salman-js/marshmallow-ui/tree/main/templates)
+   (raw files under `https://raw.githubusercontent.com/Salman-js/marshmallow-ui/main/templates/…`):
 
 | From `templates/…` | To |
 | --- | --- |
@@ -67,7 +76,7 @@ npm i nativewind react-native-css pressto
 | `components/*.tsx` | `src/components/ds/` (keep `gloss.tsx`, `chunky-button.tsx` here too) |
 
 3. **Wire the font + theme** (root layout): load Baloo 2 with `useFonts` and gate
-   render until loaded. See [references/setup.md](references/setup.md).
+   render until loaded. See [setup.md](https://github.com/Salman-js/marshmallow-ui/blob/main/references/setup.md).
 
 4. **Build with the primitives** — import from your `ds` folder and `@/tw`:
 
@@ -78,10 +87,12 @@ import { ChunkyButton } from "@/components/ds/chunky-button";
 
 ## Read next
 
-- [references/tokens.md](references/tokens.md) — colors (light/dark), type scale, radii, shadow recipe, badge palette, spacing, motion.
-- [references/setup.md](references/setup.md) — deps, font loading, NativeWind/`global.css`, the `@/tw` font wrapper (and why it matters), path alias.
-- [references/components.md](references/components.md) — every component, its props, and when to use it.
-- [references/recipes.md](references/recipes.md) — ready-made screen patterns (settings, list, empty state, hero, segmented toggle).
+Absolute links so they resolve even when only this `SKILL.md` is installed:
+
+- [tokens.md](https://github.com/Salman-js/marshmallow-ui/blob/main/references/tokens.md) — colors (light/dark), type scale, radii, shadow recipe, badge palette, spacing, motion.
+- [setup.md](https://github.com/Salman-js/marshmallow-ui/blob/main/references/setup.md) — deps, font loading, NativeWind/`global.css`, the `@/tw` font wrapper (and why it matters), path alias.
+- [components.md](https://github.com/Salman-js/marshmallow-ui/blob/main/references/components.md) — every component, its props, and when to use it.
+- [recipes.md](https://github.com/Salman-js/marshmallow-ui/blob/main/references/recipes.md) — ready-made screen patterns (settings, list, empty state, hero, segmented toggle).
 
 ## Core conventions
 
@@ -114,4 +125,4 @@ The `Text` wrapper applies the font **downstream of the css interop** and never
 mutates the `style` reference handed to the interop. Mutating that guarded `style`
 each render causes **infinite re-renders** or **blank text**. Do not "simplify"
 the wrapper by injecting `fontFamily` into the style passed to the interop. See
-[references/setup.md](references/setup.md) → "The font wrapper".
+[setup.md](https://github.com/Salman-js/marshmallow-ui/blob/main/references/setup.md) → "The font wrapper".
