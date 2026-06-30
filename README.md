@@ -1,5 +1,7 @@
 # Marshmallow UI
 
+![Marshmallow UI preview](assets/preview.png)
+
 A warm, tactile, **soft-brutalist** design system for **Expo / React Native** —
 packaged as an **Agent Skill** so coding agents (Cursor, Claude, etc.) can build
 apps in this style for you.
